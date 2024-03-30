@@ -2,32 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.header{
+   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   background-color: #1F2937;
+   
+}
+.headerframe{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1300px;
+  height: 100px;
+  
+    
+ 
+   
+}
+body{
+  background-color: #111827;
+}
+.left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+}
+.right{
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.signin button{
+   
+  background-color: #2dd4bf;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+.signup button {
+
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+
+}
+.banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.bannerframe{
+  width: 1300px;
+ margin-top: 20px;
+
+ border-radius: 10px;
+ display: flex;
+ overflow-x: auto;
+  
+}
+.football{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.footballframe{
+  display: flex;
+  align-items: center;
+  width: 1300px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.info{
+  width: 300px;
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.firstline{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.location{
+ display: flex;
+ gap: 10px;
+ align-items: center;
+ 
+  color: gray;
+}
+.footballtittle{
+  width: 1300px;
+  color: white;
+  align-items: start;
+  margin-bottom: 20px;
 }

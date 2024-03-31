@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,6 +11,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    
+   <ClerkProvider>
+
+
 
     <html lang="en">
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -18,5 +23,6 @@ export default function RootLayout({ children }) {
 
             <body className={inter.className}>{children}</body>
     </html>
+    </ClerkProvider>
   );
 }

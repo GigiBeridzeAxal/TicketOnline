@@ -1,6 +1,14 @@
-import React from 'react'
+'use client'
+import { UserButton, useUser , useAuth } from '@clerk/nextjs'
+import React, { useState } from 'react'
+
 
 export default function Header() {
+
+  const { isLoaded, isSignedIn, user } = useUser();
+
+
+
   return (
     <div className="header">
       
@@ -16,9 +24,12 @@ export default function Header() {
         <div className="ufc">უეფსი</div>
         <div className="gama">გამა</div>
         <div className="movie">კინო</div>
+        <div className="buyed">ჩემი ბილეთები</div>
+
         <div className="btns">
-            <div className="signin"><button>შესვლა</button></div>
-            <div className="signup"><button>დარეგისტრირდი</button></div>
+          {user? <div className=' flexavi  flex text-gray-300 '> {user.primaryEmailAddress.emailAddress}  <UserButton afterSignOutUrl='/' ></UserButton></div>  : <div className='flexavi flex' >            <div className="signin"><a href='sign-in' >შესვლა</a></div>
+            <div className="signup"><a href='sign-up' >დარეგისტრირდი</a></div></div> }
+
         </div>
 
        </div>
